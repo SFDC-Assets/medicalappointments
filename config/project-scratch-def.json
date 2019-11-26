@@ -1,0 +1,12 @@
+{
+    "orgName": "Einstein Prediction Builder Medical Appointments Dataset",
+    "description": "medicalappointments",
+    "template": "0TT3i0000049jzp",
+    "settings": {
+        "orgPreferenceSettings": {
+            "s1DesktopEnabled": true,
+            "s1EncryptedStoragePref2": false,
+            "selfSetPasswordInApi": true
+      }
+    }
+}
