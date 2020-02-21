@@ -1,4 +1,4 @@
-heroku config:get "EINSTEIN_VISION_GREEN_ACCOUNT_ID" -a einstein-vl-emea
+heroku config:get EINSTEIN_VISION_GREEN_ACCOUNT_ID -a einstein-vl-emea
 #sfdx force:org:create -f config/project-scratch-def.json -d 7 -s -w 60
 #sfdx force:source:push
 #sfdx force:user:password:generate
