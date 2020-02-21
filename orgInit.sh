@@ -2,8 +2,8 @@
 #sfdx force:source:push
 #sfdx force:user:password:generate
 heroku addons:create einstein-vision:starter -a einstein-vl-emea > hc.out
-cat hc.out | awk 'FNR==2{printf substr($4,1,length($4)-1)}' > EVL_EMAIL_PROPERTY.name 
-cat hc.out | awk 'FNR==2{printf substr($5,1,length($5)-1)}' > EVL_PEM_PROPERTY.name
+cat hc.out | awk 'FNR==2{printf substr($4,1,length($4)-1)}' > EVL_EMAIL_PROPERTY.name
+#cat hc.out | awk 'FNR==2{printf substr($5,1,length($5)-1)}' > EVL_PEM_PROPERTY.name
 heroku config:get $(cat EVL_EMAIL_PROPERTY.name) -a einstein-vl-emea
 #heroku config:get $(cat EVL_EMAIL_PROPERTY.name) -a einstein-vl-emea > EVL_EMAIL_PROPERTY.value
 #heroku config:get $(cat EVL_PEM_PROPERTY.name) -a einstein-vl-emea > unencrypted.pem
