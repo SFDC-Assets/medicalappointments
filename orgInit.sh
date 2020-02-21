@@ -1,8 +1,9 @@
 #sfdx force:org:create -f config/project-scratch-def.json -d 7 -s -w 60
 #sfdx force:source:push
 #sfdx force:user:password:generate
-heroku addons:create einstein-vision:starter -a einstein-vl-emea
-#heroku addons:create einstein-vision:starter -a einstein-vl-emea > hc.out
+#heroku addons:create einstein-vision:starter -a einstein-vl-emea
+heroku addons:create einstein-vision:starter -a einstein-vl-emea > hc.out
+cat hc.out | awk 'FNR==2{ print substr($4,1,length($4)-1) }'
 #cat hc.out | awk 'FNR==2{ print substr($4,1,length($4)-1) }' > EVL_EMAIL_PROPERTY.name 
 #cat hc.out | awk 'FNR==2{ print substr($5,1,length($5)-1) }' > EVL_PEM_PROPERTY.name
 #heroku config:get $(cat EVL_EMAIL_PROPERTY.name) -a einstein-vl-emea > EVL_EMAIL_PROPERTY.value
