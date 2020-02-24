@@ -1,6 +1,12 @@
 sfdx force:org:create -f config/project-scratch-def.json -d 30 -s -w 60
 sfdx force:source:push
 sfdx force:user:password:generate
+cat /etc/os-release
+uname -r
+sfdx --version
+heroku --version
+openssl version
+node --version
 #heroku addons:create einstein-vision:starter -a einstein-vl-emea > hc.out
 #cat hc.out | awk 'FNR==2{printf substr($4,1,length($4)-1)}' |tr -d '\n'
 #cat hc.out | awk 'FNR==2{printf substr($4,1,length($4)-1)}' |tr -d '\n' > EVL_EMAIL_PROPERTY.name
