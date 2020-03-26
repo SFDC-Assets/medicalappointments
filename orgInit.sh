@@ -1,4 +1,4 @@
-sfdx force:org:create -f config/project-scratch-def.json -d 30 -s -w 60
+sfdx force:org:create -f config/project-scratch-def.json -d 1 -s -w 60
 sfdx force:source:push
 sfdx force:user:password:generate
 basename "${PWD/mshanemc-}" | awk -F'-' '{print "medical-appt-" $3}'
